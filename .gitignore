@@ -1,0 +1,48 @@
+# Compiled Java classes
+*.class
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven directory
+target/
+
+# Gradle directory
+build/
+
+# IDEA files
+.idea/
+*.iml
+*.iws
+
+# Eclipse files
+*.project
+*.classpath
+*.settings/
+
+# VS Code files
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Spring Boot specific
+spring.log
+hs_err_pid*
+
+# Application-specific
+*.swp
+*~.nib
+local.properties
+.loadpath
+.rebel.xml
