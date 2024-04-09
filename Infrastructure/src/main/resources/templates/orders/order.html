@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetaBuilders: Order Confirmed</title>
+    <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
+</head>
+<body style="background-image: url('../../static/style/images/Driver.jpeg')">
+    <header>
+        <a href="/index.html">
+            <img src="../../static/style/images/Logo.png" alt="Company Logo" style="height: 50px; width: auto;">
+        </a>
+    </header>
+    <div class="centered-content">
+        <h2>Order confirmed.</h2>
+        <p>Please give your driver some time to arrive at your place.</p>
+        
+        <form th:action="@{/order}" method="post">
+            <input type="button" value="I received my order" class="received-order-btn">
+        </form>
+        <!-- Link back to search page -->
+        <br/>
+        <div class="search-link">
+            <a href="/search.html">Still hungry? Keep browsing.</a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/script/order.js"></script>
+</html>
