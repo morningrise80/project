@@ -1,4 +1,4 @@
-package org.humber.project.controllers;
+package org.humber.project.web;
 
 import org.humber.project.services.OrderDto;
 import org.humber.project.domain.Orders;
