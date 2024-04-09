@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetaBuilders: Search Restaurants</title>
+    <link rel="stylesheet" type="text/css" href="../../static/style/waiting.css">
+    <style>
+        /* Additional styles for the search bar */
+        .search-bar {
+            width: 60%; /* Adjust width as needed */
+            max-width: 600px; /* Set a maximum width for larger screens */
+            margin: 20px auto; /* Center align the search bar */
+            border: 1px solid black;
+            padding: 15px; /* Increase padding for larger size */
+            font-size: 18px; /* Increase font size for better visibility */
+            color: gray;
+            display: block; /* Ensure the search bar is displayed as a block element */
+        }
+        /* Additional styles for the restaurant list */
+        .restaurant-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+            margin-top: 20px; /* Add margin to separate search bar and restaurant list */
+        }
+        .restaurant-list li {
+            margin-bottom: 5px; /* Add margin between each restaurant */
+            border: 1px solid black;
+            padding: 10px; /* Add padding for better readability */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        .restaurant-list li:hover {
+            background-color: lightgray; /* Change background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html">
+            <img src="../../static/images/Logo.png" alt="Company Logo" style="height: 50px; width: auto;">
+        </a>
+    </header>
+
+    <!-- Centered and styled <h2> -->
+    <h2 style="text-align: center; color: black;">Search Restaurants</h2>
+    <!-- Gray search bar with black outline -->
+    <input type="text" class="search-bar" placeholder="Search restaurants...">
+    
+    <!-- Empty list to display filtered and sorted restaurants -->
+    <ul class="restaurant-list"></ul>
+
+</body>
+<script type="text/javascript" src="../../static/script/search.js"></script>
+</html>

@@ -3,7 +3,6 @@ package org.humber.project.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
-
 @Entity
 @Table (name = "orders")
 public class Orders {
