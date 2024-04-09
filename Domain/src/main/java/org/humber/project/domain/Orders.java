@@ -12,8 +12,6 @@ public class Orders {
     private int id;
     private String name;
     private double price;
-    private Long trackingId; // DeliveryTracking.java
-    private Long paymentId; // Payment.java
 
     public Orders(int id, String name, double price) {
         this.id = id;
