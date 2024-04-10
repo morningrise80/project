@@ -15,10 +15,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/orders")
 public class OrdersController {
-     @Autowired
+    @Autowired
     private OrdersRepo repo;
-
-     @GetMapping({"", "/"})
+     @GetMapping
     public String showOrdersList(Model model){
         List<Orders> orders = repo.findAll();
         model.addAttribute("orders", orders);
@@ -35,7 +34,7 @@ public class OrdersController {
     @PostMapping("/order")
     public String createOrder(@Valid @ModelAttribute OrderDto orderDto, BindingResult result){
          if (result.hasErrors()){
-             return"orders/CreateOrder";
+             return"CreateOrder";
          }
 
         Orders orders = new Orders();
@@ -49,8 +48,23 @@ public class OrdersController {
 
     @GetMapping("/edit")
     public String edit(Model model, @RequestParam int id) {
-
+        try {
+            Orders orders = repo.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid order Id:" + id));
+            model.addAttribute("orders", orders);
+            return "orders/EditOrder";
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Exception: " + ex.getMessage());
             return "redirect:/orders";
+        }
+    }
+    @PostMapping("/edit")
+    public String editOrder(@Valid @ModelAttribute Orders orders, BindingResult result) {
+        if (result.hasErrors()) {
+            return "orders/EditOrder";
+        }
+
+        repo.save(orders);
+        return "redirect:/orders";
     }
 
     @GetMapping("/delete")

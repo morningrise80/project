@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <a class="btn btn-primary" href="/orders/order">ORDER</a>
+    <a class="btn btn-primary" href="/orders/order">CREATE</a>
 
     <table class="table">
         <thead>
@@ -26,7 +26,7 @@
             <td th:text="${order.name}"></td>
             <td th:text="${order.price}"></td>
             <td>
-                <img th:src="@{'/images/' + ${order.imageFile}}" alt="..." width="100">
+                <img th:src="@{'/images/' + ${order.imageFileName}}" alt="..." width="100">
             </td>
 
             <td style="white-space: nowrap">
